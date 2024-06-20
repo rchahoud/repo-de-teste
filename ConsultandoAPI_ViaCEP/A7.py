@@ -59,12 +59,5 @@ except Exception as e:
     print(f"Erro ao gravar arquivos json {e}")
 
 
-# %%
-#Insere Registros no BAnco de dados criando uma nova tabela caso não existe 
-
-df_enderecos = pd.DataFrame(lista_enderecos)
-
-df_enderecos.to_sql("TB_ENDERECO", dbcon.engine, if_exists='replace', index=False)
-
 
 
